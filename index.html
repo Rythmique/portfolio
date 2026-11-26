@@ -2,139 +2,136 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emmanuel Nda - CHIASMA | Créateur de Sites, Applis & Community Manager en Côte d'Ivoire</title>
-<meta name="description" content="Portfolio de Emmanuel Nda, fondateur de CHIASMA. Création de site web, application mobile et community management pour entreprises en Côte d'Ivoire.">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmanuel Ndri Nda | Entrepreneur Digital, Musicien & Expert Google Maps - Bondoukou</title>
+<meta name="description" content="Emmanuel Ndri Nda - Streaming Premium, Référencement Google Maps pour entreprises, Musicien Professionnel et Professeur de Musique à Bondoukou, Côte d'Ivoire.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#FFFEFB;color:#1A1300}
-.serif{font-family:'Instrument Serif',serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#0A0A0F;color:#fff;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{max-width:1150px;margin:auto;padding:0 20px}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.85);backdrop-filter:blur(12px);border-bottom:1px solid #222}
+.nav-in{max-width:1150px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.5px}.logo span{color:#FF3D00}
+.nav-links{display:flex;gap:28px;font-size:14px;font-weight:600}
+.btn{background:#FF3D00;color:#fff;padding:11px 20px;border-radius:100px;font-weight:700;font-size:14px;display:inline-block}
+.btn-outline{border:1px solid #444;padding:11px 20px;border-radius:100px;font-weight:700;font-size:14px}
+/* HERO */
+.hero{padding:150px 0 60px;background:radial-gradient(600px 400px at 80% 10%, #FF3D0033, transparent), radial-gradient(500px 400px at 10% 90%, #FFB80022, transparent)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;background:#1E1E28;border:1px solid #333;padding:7px 14px;border-radius:100px;font-size:13px;margin-bottom:20px}
+.hero h1{font-size:52px;line-height:1.05;letter-spacing:-1.5px;font-weight:800}
+.hero h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#FFB800}
+.hero p{color:#B8B8C5;margin:20px 0 28px;font-size:17px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:30px;margin-top:35px}
+.stats b{font-size:24px;display:block}.stats span{color:#999;font-size:13px}
+.hero-img{border-radius:24px;overflow:hidden;position:relative;border:1px solid #2A2A35}
+.hero-img img{width:100%;height:480px;object-fit:cover;display:block}
+.hero-card{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(10,10,15,.92);backdrop-filter:blur(10px);padding:16px;border-radius:16px;display:flex;justify-content:space-between;align-items:center}
+/* SECTION */
+section{padding:70px 0}
+.sec-label{color:#FFB800;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.sec-title{font-size:36px;font-weight:800;letter-spacing:-1px;margin:10px 0 12px}
+.sec-sub{color:#A9A9B8;max-width:650px}
+.grid{ display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:35px}
+.card{background:#15151D;border:1px solid #262633;border-radius:22px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#FF3D00}
+.card img{width:100%;height:210px;object-fit:cover}
+.card-body{padding:24px}
+.card-body h3{font-size:21px;margin-bottom:8px}
+.card-body p{color:#B5B5C0;font-size:15px}
+.tag{display:inline-block;background:#FF3D001A;color:#FF6B3D;padding:5px 10px;border-radius:100px;font-size:12px;font-weight:700;margin-bottom:12px}
+.list{list-style:none;margin:14px 0 18px}.list li{padding:6px 0 6px 22px;position:relative;font-size:14.5px;color:#D5D5DD}
+.list li:before{content:"✓";position:absolute;left:0;color:#00D084;font-weight:800}
+.price{font-weight:800;font-size:18px}.price small{color:#999;font-weight:400;font-size:13px}
+/* MUSIQUE */
+.music{background:#14141C;border-top:1px solid #262633;border-bottom:1px solid #262633}
+.music-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:30px}
+.music-grid img{width:100%;height:360px;object-fit:cover;border-radius:20px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.pill{background:#fff;color:#111;padding:9px 16px;border-radius:100px;font-weight:700;font-size:14px}
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.step{background:#15151D;padding:24px;border-radius:20px;border:1px solid #262633}.step b{font-size:38px;color:#FF3D00}
+/* CTA */
+.cta{background:linear-gradient(135deg,#FF3D00,#FF6B00);border-radius:28px;padding:45px;text-align:center;margin:20px 0}
+.cta h2{font-size:34px;line-height:1.1;margin-bottom:12px}.cta p{opacity:.9}
+.cta .btn{background:#fff;color:#111;margin-top:20px}
+/* FOOTER */
+footer{padding:30px 0 50px;color:#888;text-align:center;font-size:14px}
+@media(max-width:820px){.hero-grid,.music-grid,.grid,.steps{grid-template-columns:1fr}.hero h1{font-size:38px}.hero-img img{height:320px}.nav-links{display:none}.sec-title{font-size:29px}}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b">
-<div class="max-w-[1100px] mx-auto px-6 py-4 flex justify-between items-center">
-<a href="#" class="font-black text-[18px]">EMMANUEL<span class="text-orange-500">.</span> CHIASMA</a>
-<a href="https://wa.me/2250554419643" class="bg-black text-white px-5 py-2.5 rounded-full text-[13px] font-bold">Me contacter →</a>
-</div>
-</header>
+<nav><div class="nav-in">
+<div class="logo">EMMANUEL <span>NDA</span></div>
+<div class="nav-links"><a href="#services">Services</a><a href="#maps">Google Maps</a><a href="#musique">Musique</a><a href="#contact">Contact</a></div>
+<a class="btn" href="https://wa.me/2250700000000">WhatsApp</a>
+</div></nav>
 
-<!-- HERO -->
-<section class="max-w-[1100px] mx-auto px-6 pt-32 pb-12">
-<div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-3 py-1 rounded-full text-[12px] font-bold">● Disponible - Côte d'Ivoire</div>
-<h1 class="serif text-[42px] md:text-[58px] leading-[0.95] mt-5">Je crée des sites, des applis<br><span class="italic text-orange-500">qui ramènent des clients.</span></h1>
-<p class="mt-5 text-[16px] text-zinc-500 max-w-[600px] leading-7">Je m'appelle Emmanuel Nda, fondateur de CHIASMA. J'aide les entreprises, écoles, restaurants et boutiques en Côte d'Ivoire à être visibles sur internet et à vendre plus.</p>
-<div class="mt-7 flex flex-wrap gap-3">
-<a href="#projets" class="bg-orange-500 text-white px-7 py-3.5 rounded-full font-bold">Voir mes projets ↓</a>
-<a href="https://wa.me/2250554419643?text=Bonjour%20Emmanuel%2C%20je%20veux%20un%20devis" class="bg-white border px-7 py-3.5 rounded-full font-bold">Demander un devis</a>
-</div>
-<div class="mt-6 flex gap-6 text-[13px] font-bold"><span>✅ +10 projets</span><span>✅ 100% Réactif</span><span>✅ Travail soigné</span></div>
-</section>
-
-<!-- SERVICES -->
-<section class="max-w-[1100px] mx-auto px-6 py-12">
-<h2 class="serif text-[34px]">Ce que je peux faire pour toi</h2>
-<div class="grid md:grid-cols-3 gap-5 mt-8">
-
-<div class="bg-white border rounded-[24px] p-6">
-<div class="text-3xl">📱</div>
-<h3 class="font-bold text-[18px] mt-3">Community Management</h3>
-<p class="text-[14px] text-zinc-500 mt-2 leading-6">Je gère ton Facebook, TikTok, Instagram. Posts, stories, réponses aux clients. Tu te concentres sur ton business, je m'occupe de ta visibilité.</p>
-<p class="mt-4 font-black">À partir de 50.000 FCFA / mois</p>
-<a href="https://wa.me/2250554419643?text=Je%20veux%20le%20Community%20Management" class="mt-4 inline-block bg-black text-white px-5 py-2.5 rounded-full text-[13px] font-bold">Commander →</a>
-</div>
-
-<div class="bg-white border rounded-[24px] p-6">
-<div class="text-3xl">💻</div>
-<h3 class="font-bold text-[18px] mt-3">Création de Site Web</h3>
-<p class="text-[14px] text-zinc-500 mt-2 leading-6">Site vitrine rapide, beau sur téléphone, avec bouton WhatsApp, Google Maps, et tes prix. Pour école, restaurant, boutique, résidence meublée.</p>
-<p class="mt-4 font-black">150.000 - 350.000 FCFA</p>
-<a href="https://wa.me/2250554419643?text=Je%20veux%20un%20site%20web" class="mt-4 inline-block bg-black text-white px-5 py-2.5 rounded-full text-[13px] font-bold">Commander →</a>
-</div>
-
-<div class="bg-white border rounded-[24px] p-6">
-<div class="text-3xl">📲</div>
-<h3 class="font-bold text-[18px] mt-3">Application Mobile</h3>
-<p class="text-[14px] text-zinc-500 mt-2 leading-6">Application Android simple et utile pour tes clients : réservation, catalogue, suivi. Comme CHIASMA, mais pour ton business.</p>
-<p class="mt-4 font-black">À partir de 500.000 FCFA</p>
-<a href="https://wa.me/2250554419643?text=Je%20veux%20une%20application" class="mt-4 inline-block bg-black text-white px-5 py-2.5 rounded-full text-[13px] font-bold">Commander →</a>
-</div>
-
-</div>
-</section>
-
-<!-- PROJETS -->
-<section id="projets" class="max-w-[1100px] mx-auto px-6 py-12">
-<h2 class="serif text-[34px]">Mes projets</h2>
-<p class="text-zinc-500 text-[14px] mt-2">La preuve que je sais faire, pas juste parler.</p>
-
-<div class="grid md:grid-cols-2 gap-5 mt-8">
-
-<!-- PROJET 1 -->
-<div class="bg-white border rounded-[28px] overflow-hidden">
-<div class="bg-orange-500 p-8 text-white">
-<div class="text-[12px] font-bold tracking-widest">APPLICATION + SITE WEB</div>
-<h3 class="serif text-[28px] mt-2">CHIASMA.pro</h3>
-<p class="text-[13px] opacity-90 mt-1">Plateforme pour les enseignants de Côte d'Ivoire</p>
-</div>
-<div class="p-6">
-<p class="text-[14px] text-zinc-600 leading-6"><b>Le problème :</b> Les enseignants galéraient pour trouver un binôme de permutation dans les groupes WhatsApp.<br><br><b>Ma solution :</b> Application + site web avec recherche par DRENA / IEPP, profils vérifiés, messagerie, données en temps réel.<br><br><b>Résultat :</b> Des milliers d'enseignants utilisent la plateforme. 100% gratuit.</p>
-<div class="mt-5 flex gap-2"><span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-[11px] font-bold">Android</span><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[11px] font-bold">Temps Réel</span><span class="bg-zinc-100 px-3 py-1 rounded-full text-[11px] font-bold">Sécurisé</span></div>
-</div>
-</div>
-
-<!-- PROJET 2 -->
-<div class="bg-white border rounded-[28px] overflow-hidden">
-<div class="bg-black p-8 text-white">
-<div class="text-[12px] font-bold tracking-widest">SITE WEB - RÉSIDENCE</div>
-<h3 class="serif text-[28px] mt-2">Résidence Meublée Bondoukou</h3>
-<p class="text-[13px] opacity-70 mt-1">Réservation de logements meublés</p>
-</div>
-<div class="p-6">
-<p class="text-[14px] text-zinc-600 leading-6"><b>Le problème :</b> La résidence n'était visible que par bouche-à-oreille.<br><br><b>Ma solution :</b> Site vitrine avec photos, prix, disponibilités et bouton WhatsApp direct pour réserver.<br><br><b>Résultat :</b> Les clients réservent directement sur WhatsApp, sans intermédiaire.</p>
-<div class="mt-5 flex gap-2"><span class="bg-zinc-100 px-3 py-1 rounded-full text-[11px] font-bold">Site Vitrine</span><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[11px] font-bold">WhatsApp Direct</span></div>
-</div>
-</div>
-
-<!-- PROJET 3 - DEMO -->
-<div class="bg-white border rounded-[28px] overflow-hidden md:col-span-2">
-<div class="p-6 flex flex-col md:flex-row justify-between gap-4 items-start md:items-center">
+<header class="hero"><div class="container"><div class="hero-grid">
 <div>
-<div class="text-[12px] font-bold tracking-widest text-orange-500">PROJET DÉMO - COMMUNITY MANAGEMENT</div>
-<h3 class="font-bold text-[20px] mt-1">Exemple : Page pour un Restaurant à Abidjan</h3>
-<p class="text-[14px] text-zinc-500 mt-1 max-w-[600px]">3 posts par semaine + stories + réponses clients. C'est exactement ce que je ferai pour ton business.</p>
+<span class="badge">📍 Bondoukou • Côte d'Ivoire • Disponible partout</span>
+<h1>Je vous aide à <em>être vu,</em><br>à divertir & à progresser.</h1>
+<p>Entrepreneur digital et musicien professionnel. J'aide les entreprises à attirer plus de clients sur Google Maps, je vous donne accès au meilleur du streaming, et je transmets ma passion de la musique.</p>
+<div class="hero-btns"><a class="btn" href="https://wa.me/2250700000000">Demander un devis →</a><a class="btn-outline" href="#services">Voir mes services</a></div>
+<div class="stats"><div><b>4+</b><span>Domaines d'expertise</span></div><div><b>100+</b><span>Clients accompagnés</span></div><div><b>7j/7</b><span>Service rapide</span></div></div>
 </div>
-<a href="https://wa.me/2250554419643?text=Je%20veux%20la%20même%20chose%20pour%20mon%20business" class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold text-[13px] whitespace-nowrap">Je veux pareil →</a>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1200&auto=format&fit=crop" alt="Emmanuel Ndri Nda - Musicien et Entrepreneur">
+<div class="hero-card"><div><b>Emmanuel Ndri Nda</b><br><span style="color:#aaa;font-size:13px">Fondateur - CHIASMA • Musicien Pro</span></div><span style="background:#00D084;color:#fff;padding:6px 12px;border-radius:100px;font-size:12px;font-weight:700">● En ligne</span></div>
 </div>
-</div>
+</div></div></header>
 
-</div>
-</section>
+<section id="services"><div class="container">
+<span class="sec-label">Mes Services</span>
+<h2 class="sec-title">Tout ce dont vous avez besoin, au même endroit.</h2>
+<p class="sec-sub">Un seul contact pour votre divertissement, votre visibilité en ligne et votre formation musicale.</p>
 
-<!-- COMMENT CA MARCHE -->
-<section class="max-w-[1100px] mx-auto px-6 py-12">
-<div class="bg-black text-white rounded-[28px] p-8 md:p-10">
-<h2 class="serif text-[32px]">Comment on travaille ensemble ?</h2>
-<div class="grid md:grid-cols-3 gap-6 mt-8 text-[14px] leading-6">
-<div><b class="text-orange-400 text-[18px]">1. Tu m'écris</b><br><span class="text-zinc-400">Tu m'envoies ton besoin sur WhatsApp. Je te réponds en moins de 2h.</span></div>
-<div><b class="text-orange-400 text-[18px]">2. Je te fais un devis</b><br><span class="text-zinc-400">Prix clair, délai clair. Pas de surprise. Tu valides, je commence.</span></div>
-<div><b class="text-orange-400 text-[18px]">3. Tu reçois ton projet</b><br><span class="text-zinc-400">Je te montre, tu corriges, je livre. Et je reste dispo après.</span></div>
-</div>
-</div>
-</section>
+<div class="grid">
+<!-- STREAMING -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80&w=1200&auto=format&fit=crop" alt="Streaming TV">
+<div class="card-body"><span class="tag">📺 STREAMING PREMIUM</span><h3>Netflix & Streaming pour tous vos écrans</h3><p>Profitez de vos films, séries et matchs préférés en haute qualité, sans interruption, sur TV, téléphone et tablette.</p>
+<ul class="list"><li><b>Netflix, Disney+, Prime Video</b> et bien plus</li><li>Compatible <b>TV, Téléphone, Tablette, Ordinateur</b></li><li>Activation rapide en <b>moins de 30 minutes</b></li><li>Support et assistance <b>7j/7</b></li></ul>
+<div class="price">À partir de 3.500 FCFA <small>/ mois</small></div><br><a class="btn" href="https://wa.me/2250700000000?text=Bonjour%20Emmanuel,%20je%20veux%20un%20abonnement%20Streaming">Commander sur WhatsApp</a>
+</div></div>
 
-<!-- CONTACT -->
-<section class="max-w-[1100px] mx-auto px-6 py-12 text-center">
-<h2 class="serif text-[36px]">On lance ton projet ?</h2>
-<p class="text-zinc-500 mt-2">Écris-moi maintenant, on en parle en 5 minutes.</p>
-<a href="https://wa.me/2250554419643?text=Bonjour%20Emmanuel%2C%20j%27ai%20vu%20ton%20portfolio%2C%20je%20veux%20un%20projet" class="inline-block mt-6 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold">💬 Ouvrir WhatsApp</a>
-<p class="mt-4 text-[13px] text-zinc-400">WhatsApp : +225 05 54 41 96 43 • +225 07 44 82 96 88<br>Instagram : @chiasma.pro • @residence_.meublee_bondoukou</p>
-</section>
+<!-- GOOGLE MAPS -->
+<div class="card" id="maps">
+<img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1200&auto=format&fit=crop" alt="Google Maps">
+<div class="card-body"><span class="tag" style="background:#00A6511A;color:#00A651">📍 GOOGLE MAPS</span><h3>Mettez votre entreprise sur Google Maps</h3><p>Votre magasin, hôtel ou restaurant n'apparaît pas sur Google Maps ? Vos clients ne peuvent pas vous trouver. Je m'en occupe.</p>
+<ul class="list"><li>Création de votre <b>Fiche Google Business</b></li><li>Votre entreprise visible sur <b>Google Maps & Recherche</b></li><li>Ajout de photos, horaires, numéro & avis clients</li><li>Idéal pour <b>Magasins, Hôtels, Restaurants, Églises, Salons...</b></li></ul>
+<div class="price">Visibilité garantie <small>• Devis gratuit</small></div><br><a class="btn" style="background:#111" href="https://wa.me/2250700000000?text=Bonjour%20Emmanuel,%20je%20veux%20mettre%20mon%20entreprise%20sur%20Google%20Maps">Être visible sur Maps →</a>
+</div></div>
+</div>
+</div></section>
 
-<footer class="border-t py-6 text-center text-[12px] text-zinc-400">© 2026 Emmanuel Nda - CHIASMA.pro - Fait avec sérieux en Côte d'Ivoire 🇨🇮</footer>
+<section class="music" id="musique"><div class="container">
+<span class="sec-label">Musique • Artiste Professionnel</span>
+<h2 class="sec-title">Musicien professionnel & Professeur de musique</h2>
+<div class="music-grid">
+<div><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop" alt="Musicien professionnel"><br><br><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop" alt="Cours de piano" style="height:180px"></div>
+<div>
+<p style="color:#C5C5D0">Musicien de scène expérimenté, je mets mon talent au service de vos événements et je forme la prochaine génération de musiciens, débutants comme avancés.</p>
+<h3 style="margin-top:20px">🎤 Pour vos événements</h3><p style="color:#A9A9B8;font-size:15px">Concerts, mariages, anniversaires, cultes, soirées privées. Prestation professionnelle, ponctuelle et de qualité.</p>
+<h3 style="margin-top:20px">🎓 Cours particuliers</h3><p style="color:#A9A9B8;font-size:15px">Apprenez à votre rythme, en ligne ou en présentiel à Bondoukou. Méthode simple, même si vous n'avez jamais touché un instrument.</p>
+<div class="pills"><span class="pill">🎼 Solfège</span><span class="pill">🎸 Guitare Basse</span><span class="pill">🎹 Piano</span><span class="pill">🎺 Trompette</span></div>
+<h3 style="margin-top:20px">🎶 Encadrement de groupe musical et chorale</h3><p style="color:#A9A9B8;font-size:15px">J'encadre et je forme votre groupe musical et votre chorale pour des prestations harmonieuses et professionnelles.</p>
+<a class="btn" href="https://wa.me/2250700000000?text=Bonjour%20Maestro,%20je%20veux%20des%20cours%20de%20musique">Réserver un cours</a>
+</div></div></div></section>
+
+<section><div class="container">
+<h2 class="sec-title">Comment ça marche ?</h2>
+<div class="steps"><div class="step"><b>01</b><h3>Vous m'écrivez</h3><p style="color:#aaa;font-size:14px">Sur WhatsApp, dites-moi ce dont vous avez besoin. Réponse en quelques minutes.</p></div><div class="step"><b>02</b><h3>Je vous propose</h3><p style="color:#aaa;font-size:14px">Devis clair, sans surprise. Vous savez exactement ce que vous payez.</p></div><div class="step"><b>03</b><h3>C'est fait !</h3><p style="color:#aaa;font-size:14px">Activation streaming, fiche Google Maps créée, ou premier cours de musique.</p></div></div>
+<div class="cta" id="contact"><h2>Prêt à passer à l'action ?</h2><p>Streaming, Google Maps ou Cours de musique — Écrivez-moi maintenant sur WhatsApp.</p><a class="btn" href="https://wa.me/2250700000000">📱 Discuter sur WhatsApp</a><p style="font-size:13px;margin-top:15px;opacity:.8">Bondoukou, Côte d'Ivoire • Service partout en Côte d'Ivoire</p></div>
+</div></section>
+
+<footer>© 2026 Emmanuel Ndri Nda — CHIASMA • Tous droits réservés<br><span>Streaming • Google Maps • Musique</span></footer>
 
 </body>
 </html>
